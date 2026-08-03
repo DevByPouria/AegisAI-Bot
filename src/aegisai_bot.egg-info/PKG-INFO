@@ -1,7 +1,0 @@
-Metadata-Version: 2.4
-Name: aegisai-bot
-Version: 0.1.0
-Summary: Professional Telegram Bot Framework
-Requires-Python: >=3.13
-License-File: LICENSE
-Dynamic: license-file
