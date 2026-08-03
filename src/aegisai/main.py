@@ -1,5 +1,6 @@
 import logging
 
+from aegisai.bot.application import create_application
 from aegisai.core.logging import setup_logging
 
 
@@ -9,6 +10,15 @@ def main() -> None:
     logger = logging.getLogger(__name__)
 
     logger.info("AegisAI Bot is starting...")
+
+    application = create_application()
+
+    logger.info(
+        "Telegram application created: %s",
+        application,
+    )
+
+    # application.run_polling()
 
 
 if __name__ == "__main__":
