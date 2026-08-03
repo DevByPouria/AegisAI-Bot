@@ -18,7 +18,9 @@ def main() -> None:
         application,
     )
 
-    # application.run_polling()
+    logger.info("Starting Telegram polling...")
+
+    application.run_polling()
 
 
 if __name__ == "__main__":
