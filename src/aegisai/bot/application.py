@@ -1,7 +1,7 @@
-from telegram.ext import Application, CommandHandler
+from telegram.ext import Application
 
+from aegisai.bot.handlers import register_handlers
 from aegisai.config.settings import settings
-from aegisai.handlers.start import start_command
 
 
 def create_application() -> Application:
@@ -11,8 +11,6 @@ def create_application() -> Application:
         .build()
     )
 
-    application.add_handler(
-        CommandHandler("start", start_command)
-    )
+    register_handlers(application)
 
     return application
