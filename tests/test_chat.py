@@ -9,6 +9,7 @@ from aegisai.services.chat import build_chat_response
         ("سلام", "سلام! 👋"),
         ("خداحافظ", "خداحافظ، روز خوبی داشته باشی. 🌹"),
         ("یک پیام ناشناس", "متوجه منظورت نشدم. 😊"),
+        ("  سلام  ", "سلام! 👋"),
     ],
 )
 def test_chat_responses(

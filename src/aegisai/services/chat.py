@@ -1,4 +1,5 @@
 def build_chat_response(message: str) -> str:
+    message = message.strip()
     if message == "سلام":
         return "سلام! 👋"
 
