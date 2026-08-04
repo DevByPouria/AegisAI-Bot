@@ -1,17 +1,21 @@
 from telegram import Update
 from telegram.ext import ContextTypes
 
+from aegisai.services.chat import build_chat_response
+
 
 async def message_handler(
     update: Update,
     context: ContextTypes.DEFAULT_TYPE,
 ) -> None:
-    """Handle regular text messages."""
-
     if update.message is None:
         return
 
-    await update.message.reply_text(
-        "فعلاً فقط دستورات را می‌شناسم 😊\n"
-        "برای مشاهده آن‌ها از /help استفاده کن."
-    )
+    user_message = update.message.text
+
+    if user_message is None:
+        return
+
+    response = build_chat_response(user_message)
+
+    await update.message.reply_text(response)
